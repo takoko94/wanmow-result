@@ -7,6 +7,7 @@
 <title>わんも～推し犬総選挙 結果発表</title>
 
 <style>
+
 /* =========================
    フォント
 ========================= */
@@ -28,8 +29,6 @@ body{
   overflow:hidden;
 
   font-family:'Yasashisa',sans-serif;
-
-  background:#ffdfe8;
 }
 
 /* =========================
@@ -48,9 +47,58 @@ body{
   align-items:center;
   justify-content:center;
 
-  background-image:url("haikei.png");
+  background:url("haikei.png");
   background-size:cover;
   background-position:center;
+}
+
+/* =========================
+   真ん中ロゴ
+========================= */
+.main-logo{
+  width:520px;
+  height:auto;
+
+  margin-bottom:24px;
+
+  filter:
+    drop-shadow(0 8px 20px rgba(0,0,0,0.22));
+
+  animation:float 4s ease-in-out infinite;
+}
+
+/* =========================
+   結果発表
+========================= */
+.result{
+  font-size:118px;
+  color:#ffffff;
+
+  letter-spacing:0.12em;
+
+  text-shadow:
+    0 6px 18px rgba(0,0,0,0.28),
+    0 0 20px rgba(255,255,255,0.35);
+
+  animation:float 4s ease-in-out infinite;
+}
+
+/* =========================
+   右下ロゴ
+========================= */
+.corner-logo{
+  position:absolute;
+
+  right:34px;
+  bottom:28px;
+
+  width:155px;
+  height:auto;
+
+  opacity:0.96;
+
+  filter:
+    drop-shadow(0 4px 12px rgba(0,0,0,0.18));
 }
 
 /* =========================
@@ -67,24 +115,24 @@ body{
 }
 
 .sparkle:nth-child(1){
-  width:12px;
-  height:12px;
-  top:80px;
-  left:120px;
+  width:14px;
+  height:14px;
+  top:90px;
+  left:130px;
   animation-delay:0s;
 }
 
 .sparkle:nth-child(2){
-  width:8px;
-  height:8px;
+  width:10px;
+  height:10px;
   top:180px;
-  right:220px;
+  right:240px;
   animation-delay:1s;
 }
 
 .sparkle:nth-child(3){
-  width:14px;
-  height:14px;
+  width:16px;
+  height:16px;
   bottom:160px;
   left:260px;
   animation-delay:2s;
@@ -93,9 +141,25 @@ body{
 .sparkle:nth-child(4){
   width:10px;
   height:10px;
-  bottom:120px;
-  right:160px;
+  bottom:140px;
+  right:200px;
   animation-delay:1.5s;
+}
+
+.sparkle:nth-child(5){
+  width:8px;
+  height:8px;
+  top:300px;
+  left:220px;
+  animation-delay:0.5s;
+}
+
+.sparkle:nth-child(6){
+  width:12px;
+  height:12px;
+  top:120px;
+  right:140px;
+  animation-delay:2.2s;
 }
 
 @keyframes sparkle{
@@ -116,91 +180,8 @@ body{
 }
 
 /* =========================
-   ロゴ
-========================= */
-.logo{
-  position:absolute;
-
-  top:42px;
-  right:42px;
-
-  width:170px;
-  height:auto;
-
-  filter:
-    drop-shadow(0 4px 12px rgba(0,0,0,0.18));
-
-  z-index:5;
-}
-
-/* =========================
-   サブタイトル
-========================= */
-.sub{
-  margin-bottom:18px;
-
-  font-size:34px;
-  color:#ffffff;
-
-  letter-spacing:0.15em;
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.25);
-}
-
-/* =========================
-   タイトル
-========================= */
-.title{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-  line-height:1.1;
-
-  color:#ffffff;
-
-  text-shadow:
-    0 4px 16px rgba(0,0,0,0.28),
-    0 0 24px rgba(255,255,255,0.4);
-}
-
-.title-top{
-  font-size:92px;
-  letter-spacing:0.08em;
-}
-
-.title-bottom{
-  margin-top:10px;
-
-  font-size:120px;
-  letter-spacing:0.12em;
-}
-
-/* =========================
-   英字
-========================= */
-.slug{
-  position:absolute;
-
-  bottom:38px;
-
-  font-size:28px;
-  letter-spacing:0.18em;
-
-  color:rgba(255,255,255,0.92);
-
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.22);
-}
-
-/* =========================
    ふわふわ
 ========================= */
-.float{
-  animation:float 4s ease-in-out infinite;
-}
-
 @keyframes float{
   0%{
     transform:translateY(0px);
@@ -227,31 +208,19 @@ body{
   <div class="sparkle"></div>
   <div class="sparkle"></div>
   <div class="sparkle"></div>
+  <div class="sparkle"></div>
+  <div class="sparkle"></div>
 
-  <!-- ロゴ -->
-  <img src="wan_logo.png" class="logo" />
+  <!-- 真ん中ロゴ -->
+  <img src="wan_logo.png" class="main-logo">
 
-  <!-- タイトル -->
-  <div class="title float">
-
-    <div class="sub">
-      わんも～Cafe Presents
-    </div>
-
-    <div class="title-top">
-      わんも～推し犬総選挙
-    </div>
-
-    <div class="title-bottom">
-      結果発表
-    </div>
-
+  <!-- 結果発表 -->
+  <div class="result">
+    結果発表
   </div>
 
-  <!-- 英字 -->
-  <div class="slug">
-    wanmow cafe
-  </div>
+  <!-- 右下ロゴ -->
+  <img src="wanmow_logo.png" class="corner-logo">
 
 </div>
 
