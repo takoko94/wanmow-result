@@ -53,76 +53,53 @@ body{
 }
 
 /* =========================
-   タイトル
+   真ん中ロゴ
 ========================= */
-.title-wrap{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.main-logo{
+  width:520px;
+  height:auto;
+
+  margin-bottom:22px;
+
+  filter:
+    drop-shadow(0 8px 20px rgba(0,0,0,0.22));
 
   animation:float 4s ease-in-out infinite;
 }
 
 /* =========================
-   上タイトル
-========================= */
-.sub-title{
-  margin-bottom:18px;
-
-  font-size:38px;
-  color:#ffffff;
-
-  letter-spacing:0.18em;
-
-  text-shadow:
-    0 4px 12px rgba(0,0,0,0.25);
-}
-
-/* =========================
-   メインタイトル
-========================= */
-.main-title{
-  font-size:104px;
-  color:#ffffff;
-
-  letter-spacing:0.12em;
-
-  text-shadow:
-    0 6px 18px rgba(0,0,0,0.28),
-    0 0 20px rgba(255,255,255,0.35);
-}
-
-/* =========================
    結果発表
 ========================= */
-.result-title{
-  margin-top:6px;
-
-  font-size:132px;
+.result{
+  font-size:128px;
   color:#ffffff;
 
   letter-spacing:0.18em;
 
   text-shadow:
     0 6px 18px rgba(0,0,0,0.28),
-    0 0 24px rgba(255,255,255,0.38);
+    0 0 24px rgba(255,255,255,0.35);
+
+  animation:float 4s ease-in-out infinite;
 }
 
 /* =========================
    右下ロゴ
 ========================= */
-.corner-logo{
+.logo{
   position:absolute;
 
   right:34px;
   bottom:28px;
 
-  /* 少しだけ小さく */
+  /* 最初よりほんの少し小さく */
   width:190px;
 
   height:auto;
 
   opacity:0.96;
+
+  z-index:10;
 
   filter:
     drop-shadow(0 4px 12px rgba(0,0,0,0.18));
@@ -238,21 +215,16 @@ body{
   <div class="sparkle"></div>
   <div class="sparkle"></div>
 
-  <!-- タイトル -->
-  <div class="title-wrap">
+  <!-- 真ん中ロゴ -->
+  <img src="wan_logo.png" class="main-logo">
 
-    <div class="sub-title">
-      わんも～推し犬総選挙
-    </div>
-
-    <div class="result-title">
-      結果発表
-    </div>
-
+  <!-- 結果発表 -->
+  <div class="result">
+    結果発表
   </div>
 
   <!-- 右下ロゴ -->
-  <img src="wanmow_logo.png" class="corner-logo">
+  <img src="wanmow_logo.png" class="logo">
 
 </div>
 
